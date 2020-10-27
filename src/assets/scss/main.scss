@@ -3,29 +3,25 @@
 @import 'utils/mixins';
 @import 'utils/fonts';
 @import 'utils/reset';
+@import 'pages/index';
 
 html {
-  line-height: $mainLineHeight;
-  font-size: $mainFontSize;
-  color: $mainFontColor;
-  height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
+  overflow: hidden;
+  font-size: 16px;
+  @include breakpoint($portrait__all){
     font-size: 14px;
-  }
+
+
+}
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
+  font-family: HelveticaL;
+  letter-spacing: 0.04em;
+  color: $purple-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,7 +55,7 @@ li {
 section,
 .section {
   position: relative;
-  padding: 40px 0;
+  /*padding: 40px 0;
   @media screen and (max-width: $smDesktopWidth) {
     padding: 36px 0;
   }
@@ -68,7 +64,7 @@ section,
   }
   @media screen and (max-width: $phoneWidth) {
     padding: 20px 0;
-  }
+  }*/
 }
 
 .wrapper {
@@ -85,22 +81,6 @@ section,
   min-height: 100vh;
 }
 
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
-}
 
 // Modules:
 // example: @import "modules/my-module.scss";

@@ -1,44 +1,84 @@
-/* Vars:
-  ========================================================================== */
 
-// Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
-
-// Size
-$mainFontColor           : #101010;
-$mainFontSize            : 18px;
-$mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
-
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 1024px;
-$tableWidth              : 768px;
-$smTableWidth            : 640px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
-
-/*
-  All colors taken from:
-  https://github.com/vedees/uimini
-*/
 
 // Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+$main-color             : #9ACCC2;
+$l-color             : #f7f8fc;
+$purple-color            : #4E254F;
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
+
+@import "~breakpoint-sass";
+
+
+//Breakpoints
+$width__desktop-hd            : 1920px;
+
+$width__desktop-hd-min        : 1600px;
+//XL
+$width__desktop-min           : 1200px;
+// LG
+$width__tablet-land           : 992px;
+//MD
+$width__tablet-port           : 768px;
+//SM
+$width__mobile-max            : 576px;
+//XS
+$width__mobile-min            : 320px;
+//Min
+$width__min                   : 100px;
+
+
+//min 1200
+$mobile__all                  : $width__min            ($width__desktop-min - 1);         // min 100 - 1200
+$portrait__all                : $width__min            ($width__tablet-land - 1);         // min 100 - 992
+
+$desktop__all                 : $width__desktop-min;
+$desktop__laptop              : $width__desktop-min    $width__desktop-hd-min;
+$desktop__laptop-min          : ($width__desktop-min   $width__desktop-hd-min) (max-height ($width__tablet-port - 1));
+
+$tablet__all                  : $width__tablet-port    ($width__desktop-min - 1);        // min 768 - 1200
+$tablet__landscape            : $width__tablet-land    ($width__desktop-min - 1) ;       // min 992 - 1200px
+$tablet__portrait             : $width__tablet-port    ($width__tablet-land - 1);        // min 768 - 992
+
+$phone__all                   : $width__min            ($width__tablet-port - 1);        // min 100 - 768
+$phone__landscape             : $portrait__all         (max-height 450px);
+$phone__small                 : $width__min            $width__mobile-max;               // min 100 - 520
+
+
+$note__phone                 : $width__tablet-land             $width__mobile-max;               // min 700 - 520
+
+
+$notebook                  : $width__min          ($width__desktop-hd-min  - 1);
+//adv
+
+
+
+$imgPath: '/img/';
+$iconsPath: $imgPath +'icons/';
+
+.container {
+  position: relative;
+
+  flex: 0 0 auto;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  // @include breakpoint($width__desktop-hd-min) {
+  //   max-width: 1440px;
+  //   padding: 0 30px;
+  // }
+  @include breakpoint($width__desktop-min) {
+    max-width: 1440px;
+    padding: 0 30px;
+  }
+  @include breakpoint($width__tablet-land) {
+    max-width: 960px;
+  }
+  @include breakpoint($width__tablet-port) {
+    max-width: 720px;
+  }
+  @include breakpoint($width__mobile-max) {
+    max-width: 540px;
+  }
+}
+

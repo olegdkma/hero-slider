@@ -11,25 +11,10 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template/issues"
-  },
-  "keywords": [
-    "webpack",
-    "webpack4",
-    "merge",
-    "bable",
-    "bable7",
-    "scss",
-    "vue"
-  ],
-  "license": "MIT",
   "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "jquery": "^3.5.1",
+    "tiny-slider": "^2.9.3",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -47,6 +32,7 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
+    "url-loader": "^4.1.1",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",

@@ -1,0 +1,191 @@
+@import 'utils/slider';
+@import 'utils/header';
+#hero-slider{
+  .inner{
+    background-image: url("../img/hero_bg.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-rows:  1.1fr 1.7fr 1fr;
+    grid-template-columns: 50% 50%;
+    height: calc( 100vh - 90px);
+    align-content: end;
+    @include breakpoint($portrait__all) {
+      grid-template-rows:  auto;
+      align-items: stretch;
+      @include breakpoint($phone__small) {
+        grid-template-columns: 100%;
+        //grid-template-rows:  180px 246px 48px;
+        padding: 0 24px 87px 24px;
+        grid-auto-flow: dense;
+        height: calc( 100vh - 79px);
+      }
+    }
+  }
+}
+.main{
+  background-color: #0b0b0b;
+  &__content{
+
+    //@include flex(column, align-center, justify-start);
+  }
+  &__button{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    @include breakpoint($phone__small){
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-row-end: 4;
+      grid-column-end: 2;
+
+    }
+
+
+    @include flex(row, align-end, justify-end);
+
+      margin-right: 180px;
+
+      @include breakpoint($portrait__all){
+        margin-right: 33px;
+        @include breakpoint($phone__small){
+          margin-right: 0;
+          margin-top: 15px;
+        }
+
+    }
+  }
+  &__text{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+    background-color: $main-color;
+    padding: 80px 40px;
+
+   margin-left: 180px;
+    @include breakpoint($mobile__all  ){
+      margin-left: 33px;
+      padding: 56px 24px;
+      @include breakpoint($phone__small){
+        margin-left: 0;
+        padding: 32px 16px;
+      }
+    }
+    @include breakpoint($phone__small){
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-row-end: 3;
+      grid-column-end: 2;
+      grid-template-areas: 'text';
+    }
+  }
+  .slider{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end:3;
+    color: $main-color;
+    @include breakpoint($phone__small){
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 2;
+      grid-column-end: 2;
+
+    }
+
+  }
+}
+.title{
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  @include breakpoint($portrait__all){
+    font-size: 42px;
+    margin-bottom: 24px;
+    @include breakpoint($phone__small){
+      margin-bottom: 8px;
+      font-size: 30px;
+    }
+  }
+}
+.wrap{
+  position: relative;
+  &:before {
+    content: "";
+    height: calc(100%);
+    border-left: 1px solid #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 64px;
+    transform: rotate(13deg);
+    z-index: 2;
+  } @include breakpoint($phone__small){
+
+      width: 100%;
+
+    }
+
+
+
+  .button{
+    background-color: #0b7bb1;
+    padding: 20px 100px 20px 32px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-color .6s cubic-bezier(.075,.82,.165,1),color .6s cubic-bezier(.075,.82,.165,1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translateZ(0);
+    @include breakpoint($phone__small){
+      padding: 16px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    span{
+      z-index: 1  ;
+    }
+    &:before{
+
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transition: transform .6s cubic-bezier(.075,.82,.165,1);
+      transform-origin: center right;
+      background-color: rgba($main-color, 0.9);
+    }
+    &:hover{
+      &:before{
+        transform: scaleX(1);
+        transform-origin: center left;
+      }
+    }
+    &:after{
+      content: url("../img/arrow.png");
+      position: absolute;
+      right: 32px;
+      top: 20px;
+      @include breakpoint($phone__small){
+        top: 15px;
+        right: 22px;
+      }
+
+    }
+
+
+
+    &_purple{
+      background: $purple-color;
+      color: white;
+    }
+  }
+}
+

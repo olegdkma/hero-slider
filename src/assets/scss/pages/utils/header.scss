@@ -1,0 +1,140 @@
+@import 'button';
+header{
+  background-color: white;
+  padding-right: 80px;
+  position: relative;
+  @include flex(row, align-center, justify-between);
+  @include breakpoint($note__phone ){
+    padding: 40px 32px;
+    &:before{
+      width: 20%;
+      height: 100%;
+      background-color: $l-color;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+
+    }
+  }@include breakpoint($phone__small  ){
+    padding: 17px 24px;
+    &:before{
+      width: 20%;
+      height: 100%;
+      background-color: $l-color;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+
+    }
+  }
+  &.active{
+
+      &:before {
+        display: none;
+      }
+      .logo{
+        background: transparent;
+      }
+
+  }
+}
+.menu{
+  display: none;
+  background-color: #E5E5E5;
+  border-top: 1px solid #F7F8FC;
+  z-index: 9;
+  .inner{
+    padding-top: 6%;
+    padding-left: 12%;
+    padding-bottom: 4%;
+    height: 100%;
+    @include flex(column, align-start, justify-start);
+  }
+  p{
+    font-size: 30px;
+    color: rgba(78, 37, 79, 0.25);
+    cursor: pointer;
+    margin-bottom: 32px;
+    @include breakpoint($phone__small){
+      font-size: 22px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover{
+      color: $purple-color;
+    }
+    &.special{
+      margin-top: auto;
+      font-size: 12px;
+      a{
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  position: absolute;
+  top: 93px;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 93px);
+  @include breakpoint($portrait__all){
+    top: 125px;
+    height: calc(100vh - 125px);
+    @include breakpoint($phone__small){
+      top: 79px;
+      height: calc(100vh - 79px);
+    }
+  }
+}
+.logo{
+ background-color: $l-color;
+  position: relative;
+  z-index: 2;
+  @include flex(row, align-center, justify-center);
+  padding: 24px 89px 24px 80px;
+  @include breakpoint($portrait__all ){
+    padding: 0;
+    background: transparent;
+
+  }
+  &__title{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include breakpoint($phone__small  ){
+      font-size: 32px;
+    }
+  }
+}
+.lang{
+  margin-left: 55px;
+
+  @include breakpoint($portrait__all){
+    display: none;
+  }
+  .inner{
+    @include flex(row, align-center, justify-between);
+
+  }
+  &__item{
+    margin-right: 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.25;
+    color: $purple-color;
+    cursor: pointer;
+    &.active{
+      opacity: 1;
+  }
+    &:last-child{
+      margin-right: 0;
+
+    }
+  }
+}

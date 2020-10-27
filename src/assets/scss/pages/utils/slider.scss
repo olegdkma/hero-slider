@@ -1,0 +1,133 @@
+.slider{
+ /* margin-left: auto;
+  width: 50%;*/
+  position: relative;
+
+  &__block{
+    @include flex(row, align-center, justify-start);
+
+    position: relative;
+  }
+  &__count, &__count2{
+    position: absolute;
+    @include flex(row, align-center, justify-start);
+    z-index: 2;
+    top: 56px;
+    left: 56px;
+    @include breakpoint($portrait__all){
+      left: 32px;
+      top: 24px;
+    @include breakpoint($phone__small){
+
+      left: 16px;
+    }
+    }
+    div{
+      margin-right: 15px;
+      cursor: pointer;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__img{
+    flex: 1 1 45%;
+    height: 100%;
+    @include breakpoint($mobile__all  ){
+      display: none;
+    }
+    img{
+      height: 256px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__inner{
+    height: 100%;
+    @include flex(row, align-center, justify-start);
+    flex-wrap: wrap;
+  }
+  &__text{
+    flex: 1 1 55%;
+    height: 100%;
+    min-height: 256px;
+
+    box-sizing: border-box;
+    padding: 56px;
+    background-color: $purple-color  ;
+    color: $main-color;
+    position: relative;
+
+    @include flex(column, align-start, justify-start);
+    @include breakpoint($portrait__all){
+      padding: 24px 32px;
+      min-height: 196px;
+      @include breakpoint($phone__small){
+        padding: 24px 16px;
+      }
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 256px 90px 0 0;
+      border-color: #4e254f transparent transparent transparent;
+      line-height: 0px;
+      _border-color: #4e254f #000000 #000000 #000000;
+      _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+      @include breakpoint($phone__small){
+        display: none;
+      }
+    }
+  }
+  &__title{
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    @include breakpoint($portrait__all){
+      margin-top: 36px;
+      font-size: 18px;
+      margin-bottom: 8px;
+      @include breakpoint($phone__small){
+        margin-top: 30px;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+}
+#main__slider, #main__slider2 {
+
+  &-ow{
+    width: 100%;
+
+    overflow: hidden;
+  }
+}
+.tns{
+  &-nav{
+
+    color: white;
+    opacity: 0.25;
+    transition: all 0.5s ease-in-out;
+    &-active{
+      opacity: 1;
+      color: $main-color ;
+    }
+  }
+  &-liveregion{
+    display: none;
+  }
+}
+#hero-slider{
+  @include flex(row, align-center, justify-start);
+
+}

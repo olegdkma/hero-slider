@@ -1,32 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Template</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div id="app">
-        <header></header>
-
-        <div class="content-wrapper">
-          <!-- expamle section (remove me) -->
-          <section id="promo" style="text-align:center;">
-            <div class="container">
-              <h1>Webpack Template</h1>
-            </div>
-          </section>
-
-          <!-- expamle vue component -->
-          <example-component />
+<html lang="ua">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>test</title>
+</head>
+<body>
+<section class="main">
+  <header>
+    <div class="logo">
+      <p class="logo__title">Logo</p>
+      <div class="lang">
+        <div class="inner">
+          <div class="lang__item active">ua</div>
+          <div class="lang__item">ru</div>
+          <div class="lang__item">en</div>
         </div>
 
-        <footer></footer>
       </div>
-      <!-- end #app wrapper -->
     </div>
-    <!-- end main wrapper -->
-  </body>
+    <div id="icon2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu">
+      <div class="inner">
+        <p>Головна</p>
+        <p>Про компанію</p>
+        <p>Варіанти придбання</p>
+        <p>Варіанти інвестування</p>
+        <p>Новини</p>
+        <p>Документи</p>
+        <p>Контакти</p>
+        <p>Співробітництво</p>
+        <p class="special">
+          Дизайн та розробка -<a href="/"> Svitsoft</a>
+        </p>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid main__content">
+    <div class="controls">
+      <div class="controls__button controls__button_next"><img src="assets/img/arrow.png" alt=""></div>
+      <div class="controls__button controls__button_prev"><img src="assets/img/arrow.png" alt=""></div>
+    </div>
+    <div id="hero-slider">
+      <div class="inner" style="background-image: url(assets/img/hero_bg.jpg)">
+        <div class="main__button">
+          <div class="wrap">
+            <span class="button button_purple"><span>ПРО КОМПАНІЮ</span> </span>
+          </div>
+        </div>
+
+        <div class="main__text">
+          <p class="main__title title">
+            Надійний <br>забудовник
+          </p>
+          <p class="main__desc">
+            – это 7 лет успешной работы на украинском рынке. Более 700 квартир уже продано, а в планах компании
+            построить 120 тыс. метров жилой площади.
+          </p>
+        </div>
+        <div class="slider">
+          <div class="slider__count">
+            <div class="tns-nav">
+              01
+            </div>
+            <div class="tns-nav">
+              02
+            </div>
+          </div>
+          <div id="main__slider" class="slider__block ">
+            <div class="slider__inner">
+              <div class="slider__text">
+                <p class="slider__title">Акційна пропозиція №1</p>
+                <p>Забудовник – это 5 лет успешной работы на украинском рынке. Успешной работы на украинском рынке.</p>
+              </div>
+              <div class="slider__img">
+                <img
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+                  alt="">
+              </div>
+            </div>
+            <div class="slider__inner">
+              <div class="slider__text">
+                <p class="slider__title">Акційна пропозиція №1</p>
+                <p>Забудовник – это 5 лет успешной работы на украинском рынке. Успешной работы на украинском рынке.</p>
+              </div>
+              <div class="slider__img">
+                <img
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+                  alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div >
+      <div class="inner" style="background-image: url(assets/img/hero_bg.jpg)">
+        <div class="main__button">
+          <div class="wrap">
+            <span class="button button_purple"><span>ПРО КОМПАНІЮ</span> </span>
+          </div>
+        </div>
+        <div class="main__text">
+          <p class="main__title title">
+            Надійний <br>забудовник
+          </p>
+          <p class="main__desc">
+            – это 7 лет успешной работы на украинском рынке. Более 700 квартир уже продано, а в планах компании
+            построить 120 тыс. метров жилой площади.
+          </p>
+        </div>
+        <div class="slider">
+          <div class="slider__count2">
+            <div class="tns-nav">
+              01
+            </div>
+            <div class="tns-nav">
+              02
+            </div>
+          </div>
+          <div id="main__slider2" class="slider__block ">
+            <div class="slider__inner">
+              <div class="slider__text">
+                <p class="slider__title">Акційна пропозиція №1</p>
+                <p>Забудовник – это 5 лет успешной работы на украинском рынке. Успешной работы на украинском рынке.</p>
+              </div>
+              <div class="slider__img">
+                <img
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+                  alt="">
+              </div>
+            </div>
+            <div class="slider__inner">
+              <div class="slider__text">
+                <p class="slider__title">Акційна пропозиція №1</p>
+                <p>Забудовник – это 5 лет успешной работы на украинском рынке. Успешной работы на украинском рынке.</p>
+              </div>
+              <div class="slider__img">
+                <img
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+                  alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
 </html>
